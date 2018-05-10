@@ -17,8 +17,7 @@ Requires: n98-magerun2
 Collection of useful commands for n98-magerun2.
 
 %prep
-# Nothing to do
-
+%autosetup
 
 %build
 # Nothing to do
