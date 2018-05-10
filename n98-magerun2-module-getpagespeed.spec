@@ -25,9 +25,9 @@ Collection of useful commands for n98-magerun2.
 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
-%{__mkdir} -p $RPM_BUILD_ROOT%{_bindir}
-%{__install} -Dpm0755 src %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/src
-%{__install} -Dpm0755 n98-magerun2.yaml %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/n98-magerun2.yaml
+%{__mkdir} -p %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed
+%{__cp} -a src %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/
+%{__cp} -a n98-magerun2.yaml %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/
 
 %files
 %defattr(-,root,root)
