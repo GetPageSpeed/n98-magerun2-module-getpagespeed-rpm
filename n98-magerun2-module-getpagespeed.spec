@@ -1,7 +1,7 @@
 # License: MIT
 # http://opensource.org/licenses/MIT
 
-Name: magerun2-module-getpagespeed
+Name: n98-magerun2-module-getpagespeed
 Version: 1.0.0
 Release: 1%{?dist}
 Summary: n98-magerun2 module by GetPageSpeed
@@ -11,13 +11,10 @@ URL: http://magerun.net/
 Source0: https://github.com/GetPageSpeed/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
-Requires:  magerun2
+Requires: n98-magerun2
 
 %description
-The swiss army knife for Magento developers, sysadmins and devops.
-The tool provides a huge set of well tested command line commands which save hours
-of work time. All commands are extendable by a module API.
-
+Collection of useful commands for n98-magerun2.
 
 %prep
 # Nothing to do
@@ -30,14 +27,14 @@ of work time. All commands are extendable by a module API.
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
 %{__mkdir} -p $RPM_BUILD_ROOT%{_bindir}
-%{__install} -m 755 -p %SOURCE0 $RPM_BUILD_ROOT%{_bindir}/magerun2
+%{__install} -Dpm0755 src %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/src
+%{__install} -Dpm0755 n98-magerun2.yaml %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/n98-magerun2.yaml
 
 %files
 %defattr(-,root,root)
-%{_bindir}/magerun2
-
+%{_usr}/local/share/n98-magerun2/modules/getpagespeed
 
 %changelog
-* Sun Mar 4 2018 Danila Vershinin <info@getpagespeed.com> 2.1.2-1
-- update to 2.1.2
+* Fri May 11 2018 Danila Vershinin <info@getpagespeed.com> 1.0.0-1
+- update to 1.0.0
 
