@@ -7,7 +7,7 @@ jobs:
         - checkout
         - run:
             name: "Build all the .spec files for EL7 via Docker image."
-            command: docker run -v ${PWD}:/sources -v ${PWD}:/output:Z ${DOCKER_IMAGE}:${OS_TYPE}-${OS_VERSION} /bin/bash -c "rm -rf /etc/yum.repos.d/CentOS-Vault.repo; rm -rf /etc/yum.repos.d/CentOS-Sources.repo; /usr/bin/build"
+            command: docker run -v ${PWD}:/sources -v ${PWD}:/output:Z ${DOCKER_IMAGE}:${OS_TYPE}-${OS_VERSION} /bin/bash -c "rm -rf /etc/yum.repos.d/CentOS-Vault.repo; rm -rf /etc/yum.repos.d/CentOS-Sources.repo; yum -y install https://extras.getpagespeed.com/redhat/7/noarch/RPMS/getpagespeed-extras-7-0.el7.gps.noarch.rpm; /usr/bin/build"
             environment:
               DOCKER_IMAGE: alectolytic/rpmbuilder
               OS_ARCH: x86_64
@@ -28,7 +28,7 @@ jobs:
         - checkout
         - run:
             name: "Build all the .spec files for EL6 via Docker image."
-            command: docker run -v ${PWD}:/sources -v ${PWD}:/output:Z ${DOCKER_IMAGE}:${OS_TYPE}-${OS_VERSION} /bin/bash -c "sed -i 's/-v OUTPUT_UID/-z "${OUTPUT_UID}"/' /usr/bin/build; /usr/bin/build"
+            command: docker run -v ${PWD}:/sources -v ${PWD}:/output:Z ${DOCKER_IMAGE}:${OS_TYPE}-${OS_VERSION} /bin/bash -c "sed -i 's/-v OUTPUT_UID/-z "${OUTPUT_UID}"/' /usr/bin/build; yum -y install https://extras.getpagespeed.com/redhat/6/noarch/RPMS/getpagespeed-extras-6-0.el6.gps.noarch.rpm; /usr/bin/build"
             environment:
               DOCKER_IMAGE: alectolytic/rpmbuilder
               OS_ARCH: x86_64
