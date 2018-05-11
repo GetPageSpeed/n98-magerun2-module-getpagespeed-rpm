@@ -3,7 +3,7 @@
 
 Name: n98-magerun2-module-getpagespeed
 Version: 1.0.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: n98-magerun2 module by GetPageSpeed
 
 License: GPLv2+ and MIT and BSD
@@ -26,14 +26,14 @@ Collection of useful commands for n98-magerun2.
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
 %{__mkdir} -p %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed
-%{__cp} -a src %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/
-%{__cp} -a n98-magerun2.yaml %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/
+%{__cp} -r src %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/
+%{__cp} -r n98-magerun2.yaml %{buildroot}%{_usr}/local/share/n98-magerun2/modules/getpagespeed/
 
 %files
-%defattr(-,root,root)
+%defattr(644,root,root,755)
 %{_usr}/local/share/n98-magerun2/modules/getpagespeed
 
 %changelog
-* Fri May 11 2018 Danila Vershinin <info@getpagespeed.com> 1.0.0-1
+* Fri May 11 2018 Danila Vershinin <info@getpagespeed.com> 1.0.0-2
 - update to 1.0.0
 
