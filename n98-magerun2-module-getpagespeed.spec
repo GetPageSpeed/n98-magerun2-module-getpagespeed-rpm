@@ -34,10 +34,9 @@ Collection of useful commands for n98-magerun2.
 %{_usr}/local/share/n98-magerun2/modules/getpagespeed
 
 %changelog
-* Fri May 11 2018 Danila Vershinin <info@getpagespeed.com>
+* Fri May 11 2018 Danila Vershinin <info@getpagespeed.com> 1.0.3-3
 - upstream version auto-updated to 1.0.3
 
-OK
 * Fri May 11 2018 Danila Vershinin <info@getpagespeed.com> 1.0.0-2
 - update to 1.0.0
 
