@@ -4,7 +4,7 @@
 Name: n98-magerun2-module-getpagespeed
 Version: 1.0.3
 Release: 1%{?dist}
-Summary: n98-magerun2 module by GetPageSpeed
+Summary: The n98-magerun2 module by GetPageSpeed
 
 License: GPLv2+ and MIT and BSD
 URL: http://magerun.net/
