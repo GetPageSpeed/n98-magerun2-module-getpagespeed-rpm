@@ -2,7 +2,7 @@
 # http://opensource.org/licenses/MIT
 
 Name: n98-magerun2-module-getpagespeed
-Version: 1.0.3
+Version: 1.0.4
 Release: 1%{?dist}
 Summary: The n98-magerun2 module by GetPageSpeed
 
@@ -34,6 +34,9 @@ Collection of useful commands for n98-magerun2.
 %{_usr}/local/share/n98-magerun2/modules/getpagespeed
 
 %changelog
+* Fri Aug 30 2019 Danila Vershinin <info@getpagespeed.com> 1.0.4-1
+- upstream version auto-updated to 1.0.4
+
 * Fri May 11 2018 Danila Vershinin <info@getpagespeed.com> 1.0.3-3
 - upstream version auto-updated to 1.0.3
 
