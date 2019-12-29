@@ -9,8 +9,8 @@ Release: 2%{?dist}
 Summary: The n98-magerun2 module by GetPageSpeed
 
 License: GPLv2+ and MIT and BSD
-URL: http://magerun.net/
-Source0: https://github.com/GetPageSpeed/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
+URL: https://github.com/GetPageSpeed/%{name}
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 # This is where /usr/share/n98-magerun2/modules was added as modules location
