@@ -42,7 +42,7 @@ Collection of useful commands for n98-magerun2.
 
 %changelog
 * Sun Apr 19 2020 Danila Vershinin <info@getpagespeed.com> 1.0.5-1
-- release 1.0.5
+- released 1.0.5
 
 * Sun Dec 29 2019 Danila Vershinin <info@getpagespeed.com> 1.0.4-2
 - use non-local, proper location for modules now that n98-magerun2 supports it
