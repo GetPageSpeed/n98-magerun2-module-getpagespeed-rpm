@@ -4,13 +4,13 @@
 # http://opensource.org/licenses/MIT
 
 Name: n98-magerun2-module-getpagespeed
-Version: 1.0.7
+Version: 1.0.8
 Release: 1%{?dist}
 Summary: The n98-magerun2 module by GetPageSpeed
 
 License: GPLv2+ and MIT and BSD
 URL: https://github.com/GetPageSpeed/%{name}
-Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 # This is where /usr/share/n98-magerun2/modules was added as modules location
@@ -41,8 +41,8 @@ Collection of useful commands for n98-magerun2.
 
 
 %changelog
-* Sun Apr 26 2020 Danila Vershinin <info@getpagespeed.com> 1.0.7-1
-- release 1.0.7
+* Sun Apr 26 2020 Danila Vershinin <info@getpagespeed.com> 1.0.8-1
+- release 1.0.8
 
 * Sun Apr 19 2020 Danila Vershinin <info@getpagespeed.com> 1.0.6-1
 - released 1.0.6
